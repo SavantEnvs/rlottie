@@ -1,0 +1,9 @@
+project: savantenvs/rlottie
+target: fuzz_lottie_dotlottie
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lottie_dotlottie/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lottie_dotlottie
+    libfuzzer: true
+    timeout: 5
